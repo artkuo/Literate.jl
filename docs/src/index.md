@@ -2,17 +2,19 @@
 
 Welcome to the documentation for [Literate](https://github.com/fredrikekre/Literate.jl) 
 -- a simplistic package for
-[Literate Programming](https://en.wikipedia.org/wiki/Literate_programming).
+[Literate Programming](https://en.wikipedia.org/wiki/Literate_programming). It facilitates
+combination of source code with documentation and natural language explanations in 
+human-friendly formats. 
 
 ### What?
 
 Literate is a package that generates markdown pages
-(for e.g. [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl)), and
-[Jupyter notebooks](http://jupyter.org/), from the same source file. There is also
-an option to "clean" the source from all metadata, and produce a pure Julia script.
-
-The main design goal is simplicity. It should be simple to use, and the syntax should
-be simple. In short, all you have to do is to write a commented julia script!
+(e.g. [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl)), and
+[Jupyter notebooks](http://jupyter.org/), from the same executable Julia source file. The 
+main design goal is simplicity. It should be easy to use and have simple syntax. In short, 
+all you have to do is to write a commented julia script! Metadata
+in comments describe how documentation will be generated, and a file can optionally be cleaned
+to produce a plain Julia script without special syntax.
 
 The public interface consists of three functions, all of which take the same script file
 as input, but generate different output:
@@ -29,16 +31,16 @@ Examples are (probably) the best way to showcase your awesome package, and examp
 are often the best way for a new user to learn how to use it. It is therefore important
 that the documentation of your package contains examples for users to read and study.
 However, people are different, and we all prefer different ways of trying out a new
-package. Some people want to RTFM, others want to explore the package interactively in,
-for example, a notebook, and some people want to study the source code. The aim of
+package. Some people want to read a manual, others want to explore the package interactively in,
+for example, a tutorial notebook, and some people want to study the source code. The aim of
 Literate is to make it easy to give the user all of these options, while still
 keeping maintenance to a minimum.
 
 It is quite common that packages have "example notebooks" to showcase the package.
-Notebooks are great for showcasing a package, but they are not so great with version
-control, like git. The reason being that a notebook is a very "rich" format since it
-contains output and other metadata. Changes to the notebook thus result in large diffs,
-which makes it harder to review the actual changes.
+Notebooks are great for showcasing a package with executable code cells, but they are not so 
+great with version control, like git. The reason being that a notebook is a very "rich" 
+format since it contains output and other metadata. Changes to the notebook thus result in 
+large diffs not readable by humans, which makes it harder to review the actual changes.
 
 It is also common that packages include examples in the documentation, for example
 by using [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl) `@example`-blocks.
